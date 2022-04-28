@@ -1,0 +1,38 @@
+
+<meta charset="UTF-8">
+
+<script>
+
+   
+    var contGer;
+    var contAno;
+    contAno = 0;
+
+    //objeto para pegar o ano
+    const date = new Date();
+    const currentYear = date.getFullYear();
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function geracoes(ano){
+        
+        contAno=0; 
+        contAno=ano;
+        contGer=0;
+    
+        while (contAno <= date.getFullYear()) {
+              contGer = contGer+1;
+              document.write("Ano: " + contAno + " Geração: " + contGer);
+              contAno = (contAno+28);             
+             pulaLinha();
+        }    
+
+        return contGer;
+    }
+
+//Informe um ano dentro da função geracoes pra saber quantas gerações
+document.write("São um total de: " + geracoes(1500) + " gerações.");
+
+</script>
